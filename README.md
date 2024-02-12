@@ -16,3 +16,9 @@ Example of escrow contract to exchange tokens between users
 ```bash
 forge test
 ```
+
+| File                      | % Lines        | % Statements   | % Branches     | % Funcs       |
+|---------------------------|----------------|----------------|----------------|---------------|
+| script/DeployEscrow.s.sol | 100.00% (4/4)  | 100.00% (5/5)  | 100.00% (0/0)  | 100.00% (1/1) |
+| src/Escrow.sol            | 92.50% (37/40) | 94.83% (55/58) | 83.33% (15/18) | 100.00% (6/6) |
+| Total                     | 93.18% (41/44) | 95.24% (60/63) | 83.33% (15/18) | 100.00% (7/7) |
