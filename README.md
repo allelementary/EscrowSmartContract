@@ -1,66 +1,18 @@
-## Foundry
+# Escrow SmartContract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## About
 
-Foundry consists of:
+Example of escrow contract to exchange tokens between users
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## How should it work?
 
-## Documentation
-
-https://book.getfoundry.sh/
+1. An order Owner creates an order to exchange one token to another at specified price. Owner gives permission to EscrowContract to be able to transfer tokens on behalf of an owner
+2. An order Executor should be able to get order book, and chose an order to execute. Then executor gives permission to a contract to transfer tokens on his behalf. If funding value is less then expected -> transaction would be reverted. Else -> contract would send tokens to users and close an order
 
 ## Usage
 
-### Build
+- Run tests:
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+```bash
+forge test
 ```
